@@ -1,0 +1,73 @@
+body{
+    background-color: #033949;
+    color: antiquewhite;
+}
+#encabezado{
+    float: right;
+    width: 100%;
+    padding: 2%;
+    bottom: 3%;
+    text-align: center;
+}
+#bannerMes{
+    float: right;
+    width: 100%;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0px;
+}
+.botonIzquierda{
+    left: 0%;
+}
+.botonDerecha{
+    right:0%;
+    float:right;
+}
+
+header{
+    background-color: #A4FF4A;
+    color: #033949;
+    width:100%;
+}
+.mes{
+    background-color: black;
+    color: white;
+}
+
+a{
+    color: #A4FF4A;
+}
+#contact{
+  top: 20%;
+}
+#title1, #app{
+  display: block;
+  text-align: center;
+}
+#title2, #contact{
+  display: none;
+  text-align: center;
+}
+
+@media only screen and (orientation: Portrait){
+  .showInPortrait{
+    display:block;
+  }
+  .showInLandscape{
+    display:none;
+  }
+}
+@media only screen and (orientation: Landscape){
+  .showInPortrait{
+    display:none;
+  }
+  .showInLandscape{
+    display:block;
+  }
+  .left,
+  .right {
+   float: left;
+   width: 50%;
+  }
+}
