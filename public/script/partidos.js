@@ -4,14 +4,15 @@ var partidos = [{
     equipo1: "U1",
     equipo2: "U4",
     horario: "9:30",
-    map: "https://www.google.com/maps/d/viewer?mid=1QnaR8ef5aC4r4C255jypOHspc2YYhLka&ll=41.90026838780964%2C-87.62908190000002&z=18"
+    map: "https://www.google.com/maps/d/embed?mid=1QnaR8ef5aC4r4C255jypOHspc2YYhLka"
 },
 {
     matchday: 1,
     estadio: "Greenbay",
     equipo1: "U3",
     equipo2: "U2",
-    horario: "13:00", map: "https://www.google.com/maps/d/viewer?mid=1hZNOyJTQ-rF98ZLixGy8m37H5mvs-3fN&ll=41.9138023%2C-87.6378393&z=17"
+    horario: "13:00",
+    map: "https://www.google.com/maps/d/embed?mid=1hZNOyJTQ-rF98ZLixGy8m37H5mvs-3fN"
 },
 {
     matchday: 2,
@@ -19,7 +20,7 @@ var partidos = [{
     equipo1: "U5",
     equipo2: "U6",
     horario: "9:30",
-    map: "https://www.google.com/maps/d/viewer?mid=1wbhmRjZGOF9eRDn6oIIciuXqQd2gi_Yg&ll=41.9232646%2C-87.6629259&z=17"
+    map: "https://www.google.com/maps/d/embed?mid=1wbhmRjZGOF9eRDn6oIIciuXqQd2gi_Yg"
 },
 {
     matchday: 2,
@@ -27,7 +28,7 @@ var partidos = [{
     equipo1: "U6",
     equipo2: "U1",
     horario: "13:00",
-    map: "https://www.google.com/maps/d/viewer?mid=1SID7QdfDWObUWMXQOsC6PyJM3FKPEW9K&ll=41.92957828780831%2C-87.64589760000001&z=18"
+    map: "https://www.google.com/maps/d/embed?mid=1SID7QdfDWObUWMXQOsC6PyJM3FKPEW9K"
 },
 {
     matchday: 3,
@@ -35,7 +36,7 @@ var partidos = [{
     equipo1: "U2",
     equipo2: "U4",
     horario: "9:30",
-    map: "https://www.google.com/maps/d/viewer?mid=1KZCKiaP9yNRrGkWK52RmnKaF9gy8M8xB&ll=41.9070965%2C-87.6461883&z=17"
+    map: "https://www.google.com/maps/d/embed?mid=1KZCKiaP9yNRrGkWK52RmnKaF9gy8M8xB"
 },
 {
     matchday: 3,
@@ -43,7 +44,7 @@ var partidos = [{
     equipo1: "U3",
     equipo2: "U5",
     horario: "13:00",
-    map: "https://www.google.com/maps/d/viewer?mid=1QnaR8ef5aC4r4C255jypOHspc2YYhLka&ll=41.90026838780964%2C-87.62908190000002&z=18"
+    map: "https://www.google.com/maps/d/embed?mid=1QnaR8ef5aC4r4C255jypOHspc2YYhLka"
 },
 {
     matchday: 4,
@@ -51,7 +52,7 @@ var partidos = [{
     equipo1: "U1",
     equipo2: "U3",
     horario: "9:30",
-    map: "https://www.google.com/maps/d/viewer?mid=1xAgVyYoWCHYLd_WxuoHsMA16JfzNQASg&ll=41.9197768%2C-87.65136669999998&z=17"
+    map: "https://www.google.com/maps/d/embed?mid=1xAgVyYoWCHYLd_WxuoHsMA16JfzNQASg"
 },
 {
     matchday: 4,
@@ -59,7 +60,7 @@ var partidos = [{
     equipo1: "U2",
     equipo2: "U6",
     horario: "13:00",
-    map: "https://www.google.com/maps/d/viewer?mid=1wbhmRjZGOF9eRDn6oIIciuXqQd2gi_Yg&ll=41.9232646%2C-87.6629259&z=17"
+    map: "https://www.google.com/maps/d/embed?mid=1wbhmRjZGOF9eRDn6oIIciuXqQd2gi_Yg"
 },
 {
     matchday: 5,
@@ -67,7 +68,7 @@ var partidos = [{
     equipo1: "U4",
     equipo2: "U5",
     horario: "9:30",
-    map: "https://www.google.com/maps/d/viewer?mid=1hZNOyJTQ-rF98ZLixGy8m37H5mvs-3fN&ll=41.9138023%2C-87.6378393&z=17"
+    map: "https://www.google.com/maps/d/embed?mid=1hZNOyJTQ-rF98ZLixGy8m37H5mvs-3fN"
 },
 {
     matchday: 6,
@@ -75,7 +76,7 @@ var partidos = [{
     equipo1: "U2",
     equipo2: "U5",
     horario: "9:30",
-    map: "https://www.google.com/maps/d/viewer?mid=1SID7QdfDWObUWMXQOsC6PyJM3FKPEW9K&ll=41.92957828780831%2C-87.64589760000001&z=18"
+    map: "https://www.google.com/maps/d/embed?mid=1SID7QdfDWObUWMXQOsC6PyJM3FKPEW9K"
 },
 {
     matchday: 6,
@@ -83,7 +84,7 @@ var partidos = [{
     equipo1:"U1",
     equipo2: "U6",
     horario: "13:00",
-    map: "https://www.google.com/maps/d/viewer?mid=1xAgVyYoWCHYLd_WxuoHsMA16JfzNQASg&ll=41.9197768%2C-87.65136669999998&z=17"
+    map: "https://www.google.com/maps/d/embed?mid=1xAgVyYoWCHYLd_WxuoHsMA16JfzNQASg"
 },
 {
     matchday: 7,
@@ -91,7 +92,7 @@ var partidos = [{
     equipo1: "U3",
     equipo2: "U4",
     horario: "9:30",
-    map: "https://www.google.com/maps/d/viewer?mid=1wbhmRjZGOF9eRDn6oIIciuXqQd2gi_Yg&ll=41.9232646%2C-87.6629259&z=17"
+    map: "https://www.google.com/maps/d/embed?mid=1wbhmRjZGOF9eRDn6oIIciuXqQd2gi_Yg"
 },
 {
     matchday: 7,
@@ -99,7 +100,7 @@ var partidos = [{
     equipo1: "U5",
     equipo2: "U1",
     horario: "13:00",
-    map: "https://www.google.com/maps/d/viewer?mid=1hZNOyJTQ-rF98ZLixGy8m37H5mvs-3fN&ll=41.9138023%2C-87.6378393&z=17"
+    map: "https://www.google.com/maps/d/embed?mid=1hZNOyJTQ-rF98ZLixGy8m37H5mvs-3fN"
 },
 {
     matchday: 8,
@@ -107,7 +108,7 @@ var partidos = [{
     equipo1: "U6",
     equipo2: "U3",
     horario: "9:30",
-    map: "https://www.google.com/maps/d/viewer?mid=1KZCKiaP9yNRrGkWK52RmnKaF9gy8M8xB&ll=41.9070965%2C-87.6461883&z=17"
+    map: "https://www.google.com/maps/d/embed?mid=1KZCKiaP9yNRrGkWK52RmnKaF9gy8M8xB"
 },
 {
     matchday: 8,
@@ -115,7 +116,7 @@ var partidos = [{
     equipo1: "U2",
     equipo2: "U4",
     horario: "13:00",
-    map: "https://www.google.com/maps/d/viewer?mid=1SID7QdfDWObUWMXQOsC6PyJM3FKPEW9K&ll=41.92957828780831%2C-87.64589760000001&z=18"
+    map: "https://www.google.com/maps/d/embed?mid=1SID7QdfDWObUWMXQOsC6PyJM3FKPEW9K"
 },
 {
     matchday: 9,
@@ -123,7 +124,7 @@ var partidos = [{
     equipo1: "U3",
     equipo2: "U1",
     horario: "9:30",
-    map: "https://www.google.com/maps/d/viewer?mid=1QnaR8ef5aC4r4C255jypOHspc2YYhLka&ll=41.90026838780964%2C-87.62908190000002&z=18"
+    map: "https://www.google.com/maps/d/embed?mid=1QnaR8ef5aC4r4C255jypOHspc2YYhLka"
 },
 {
     matchday: 9,
@@ -131,7 +132,7 @@ var partidos = [{
     equipo1: "U5",
     equipo2: "U6",
     horario: "13:00",
-    map: "https://www.google.com/maps/d/viewer?mid=1wbhmRjZGOF9eRDn6oIIciuXqQd2gi_Yg&ll=41.9232646%2C-87.6629259&z=17"
+    map: "https://www.google.com/maps/d/embed?mid=1wbhmRjZGOF9eRDn6oIIciuXqQd2gi_Yg"
 }];
 
 var fechas = [{

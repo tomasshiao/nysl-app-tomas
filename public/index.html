@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <link rel="stylesheet" href="style/style.css">
   <!-- update the version number as needed -->
@@ -23,18 +22,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable"content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="container-fluid" id="body">
   <header>
     <img src="images/nysl_logo.png" alt="logo" class="col-2">
-    <h2 class="col-10" id="encabezado" class="text-center">Northside Youth Soccer League</h2>
+    <h2 class="col-9" id="encabezado" class="text-center">Northside Youth Soccer League</h2>
     <div class="titulo row">
       <button onclick="cambioPagina()" class="btn btn-outline-success botonIzquierda col col-1">←</button>
-      <h1 id="title1" class="text-center col col-10">Schedule</h1>
-      <h1 id="title2" class="text-center col col-10">Contact</h1>
+      <h1 id="title1" class="text-center col col-8">Schedule</h1>
+      <h1 id="title2" class="text-center col col-8">Contact</h1>
       <button onclick="cambioPagina()" class="btn btn-outline-success botonDerecha col col-1">→</button>
     </div>
   </header>
@@ -46,42 +45,32 @@
           <h1 id="month" class="text-center col col-10">{{mes.nombre}}</h1>
           <button v-on:click="mesPosterior(today)" class="btn btn-outline-light botonDerecha">→</button>
         </div>
-        <div style="width: 100%">
-          <div class="left">
-            <div class="accordion" id="accordion" class="partidosTabla" v-for="(fecha, index) in mes.fechas"
-              v-if="today == mes.numero">
-              <div class="card">
-                <button class="btn btn-link" type="button" data-toggle="collapse"
-                  v-bind:data-target="'#collapse' + fecha.numero" aria-expanded="true"
-                  v-bind:aria-controls="'collapse' + fecha.numero">
-                  <div class="card-header" v-bind:id="'heading' + fecha.numero">
-                    <h2 class="mb-0 text-center">
-                      {{ 'Matchday ' + fecha.numero + ' (' + fecha.mes + '/' + fecha.dia + ')' }}
-                    </h2>
-                  </div>
-                </button>
-              </div>
-              <div v-bind:id="'collapse' + fecha.numero" v-bind:class="{ show: index == 0 }" class="collapse"
-                v-bind:aria-labelledby="'heading' + fecha.numero" data-parent="#accordion">
-                <div class="card-body">
-                  <div class="row" v-for="partido in fecha.partidos">
-                    <h2 class="col">{{ partido.equipo1 + ' vs ' + partido.equipo2 }}</h2>
-                    <h2 class="col"> {{ partido.horario }} </h2>
-                    <h2 class="col showInPortrait" id="btn-maps"><a v-bind:href=partido.map>{{ partido.estadio }}</a>
-                    </h2>
-                    <h2 class="col showInLandscape btn-estadio-class"><a v-bind:id="'btn-estadio' + index"
-                        v-on:click="seleccionarEstadio(partido.map, index)">{{ partido.estadio }}</a></h2>
-                  </div>
+        <div  class="left">
+          <div class="accordion" id="accordion" class="partidosTabla" v-for="(fecha, index) in mes.fechas" v-if="today == mes.numero">
+            <div class="card">
+              <button class="btn btn-link" type="button" data-toggle="collapse" v-bind:data-target="'#collapse' + fecha.numero" aria-expanded="true" v-bind:aria-controls="'collapse' + fecha.numero">
+                <div class="card-header" v-bind:id="'heading' + fecha.numero">
+                  <h2 class="mb-0 text-center">
+                    {{ 'Matchday ' + fecha.numero + ' (' + fecha.mes + '/' + fecha.dia + ')' }}
+                  </h2>
+                </div>
+              </button>
+            </div>
+            <div v-bind:id="'collapse' + fecha.numero" v-bind:class="{ show: index == 0 }" class="collapse" v-bind:aria-labelledby="'heading' + fecha.numero" data-parent="#accordion">
+              <div class="card-body">
+                <div class="row" v-for="partido in fecha.partidos">
+                  <h2 class="col">{{ partido.equipo1 + ' vs ' + partido.equipo2 }}</h2>
+                  <h2 class="col"> {{ partido.horario }} </h2>
+                  <h2 class="col showInPortrait" id="btn-maps"><a v-bind:href=partido.map>{{ partido.estadio }}</a></h2>
+                  <h2 class="col showInLandscape btn-estadio-class"><a v-bind:id="'btn-estadio' + index" v-on:click="seleccionarEstadio(partido.map, index)">{{ partido.estadio }}</a></h2>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <div class="right">
-          <div class="showInLandscape" style="width:50%;" v-if="today == mes.numero && mes.fechas > 0">
-            <iframe id="selectedMap"
-              src="https://www.google.com/maps/d/embed?mid=1SID7QdfDWObUWMXQOsC6PyJM3FKPEW9K"></iframe>
+          <div id="mapa"  class="showInLandscape" style="width:50%;" v-if="today == mes.numero && mes.fechas.length > 0">
+          <iframe id="selectedMap" src="https://www.google.com/maps/d/embed?mid=1SID7QdfDWObUWMXQOsC6PyJM3FKPEW9K"></iframe>
           </div>
         </div>
       </div>
@@ -96,14 +85,11 @@
   </section>
   <script src="script/partidos.js"></script>
   <script src="script/main.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
 </body>
 

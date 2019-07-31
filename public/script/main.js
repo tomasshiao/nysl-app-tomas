@@ -22,6 +22,9 @@ var app = new Vue({
           } else {
             app.today = app.today + 1 - 12;
           }
+      },
+      seleccionarEstadio(map, index){
+        $("#selectedMap").attr("src", map);
       }
     }
 });
