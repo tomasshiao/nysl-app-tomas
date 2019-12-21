@@ -5,9 +5,13 @@ body{
 #encabezado{
     float: right;
     width: 100%;
-    padding: 2%;
-    bottom: 3%;
+    display:block;
     text-align: center;
+    padding: 2%;
+}
+#nyslLogo{
+  width: 100%;
+  height: 100%;
 }
 #bannerMes{
     float: right;
@@ -18,11 +22,11 @@ body{
     margin: 0px;
 }
 .botonIzquierda{
-    left: 0%;
+    /* left: 0%; */
 }
 .botonDerecha{
-    right:0%;
-    float:right;
+    /* right:0%;
+    float:right; */
 }
 
 header{
