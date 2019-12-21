@@ -8,6 +8,7 @@ body{
     display:block;
     text-align: center;
     padding: 2%;
+    font-size: 4.5vw;
 }
 #nyslLogo{
   width: 100%;
@@ -21,14 +22,6 @@ body{
     padding-right: 2%;
     margin: 0px;
 }
-.botonIzquierda{
-    /* left: 0%; */
-}
-.botonDerecha{
-    /* right:0%;
-    float:right; */
-}
-
 header{
     background-color: #A4FF4A;
     color: #033949;
@@ -52,6 +45,9 @@ a{
 #title2, #contact{
   display: none;
   text-align: center;
+}
+#title1, #title2, #month{
+  font-size: 6vw;
 }
 @media only screen and (orientation: Portrait){
   .showInPortrait{
