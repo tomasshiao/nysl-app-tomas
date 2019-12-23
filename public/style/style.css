@@ -14,6 +14,13 @@ body{
   width: 100%;
   height: 100%;
 }
+.titulo{
+  width: 100%;
+  text-align: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin: 0px;
+}
 #bannerMes{
     float: right;
     width: 100%;
@@ -48,6 +55,9 @@ a{
 }
 #title1, #title2, #month{
   font-size: 6vw;
+}
+.flecha{
+  font-size: 4vw;
 }
 @media only screen and (orientation: Portrait){
   .showInPortrait{

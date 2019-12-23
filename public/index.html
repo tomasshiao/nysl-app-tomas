@@ -32,11 +32,11 @@
     <img src="images/nysl_logo.png" alt="logo" class="col-2" id="nyslLogo">
     <h2 class="col-9" id="encabezado" class="text-center col-10">Northside Youth Soccer League</h2>
   </div>
-    <div class="titulo row" width="100%">
-      <button onclick="cambioPagina()" class="btn btn-outline-success botonIzquierda col col-1">←</button>
-      <h1 id="title1" class="text-center col col-8">Schedule</h1>
-      <h1 id="title2" class="text-center col col-8">Contact</h1>
-      <button onclick="cambioPagina()" class="btn btn-outline-success botonDerecha col col-1">→</button>
+    <div class="titulo row">
+      <button onclick="cambioPagina()" class="btn btn-outline-success flecha col col-1">←</button>
+      <h1 id="title1" class="text-center col col-10">Schedule</h1>
+      <h1 id="title2" class="text-center col col-10">Contact</h1>
+      <button onclick="cambioPagina()" class="btn btn-outline-success flecha col col-1">→</button>
     </div>
   </header>
   <!--Schedule Section-->
@@ -44,9 +44,9 @@
     <div id="bannerMes">
       <div v-for="mes in meses">
         <div v-bind:id="'mes' + mes.numero" class="mes row" v-if="today == mes.numero">
-          <button v-on:click="mesAnterior(today)" class="btn btn-outline-light botonIzquierda">←</button>
+          <button v-on:click="mesAnterior(today)" class="btn btn-outline-light col col-1 flecha">←</button>
           <h1 id="month" class="text-center col col-10">{{mes.nombre}}</h1>
-          <button v-on:click="mesPosterior(today)" class="btn btn-outline-light botonDerecha">→</button>
+          <button v-on:click="mesPosterior(today)" class="btn btn-outline-light col col-1 flecha">→</button>
         </div>
         <div  class="left">
           <div class="accordion" id="accordion" class="partidosTabla" v-for="(fecha, index) in mes.fechas" v-if="today == mes.numero">
