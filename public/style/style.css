@@ -2,6 +2,9 @@ body{
     background-color: #033949;
     color: antiquewhite;
 }
+h2{
+  font-size: 4vw;
+}
 #encabezado{
     float: right;
     width: 100%;
@@ -17,16 +20,13 @@ body{
 .titulo{
   width: 100%;
   text-align: center;
-  padding-left: 2%;
-  padding-right: 2%;
   margin: 0px;
 }
 #bannerMes{
-    float: right;
     width: 100%;
     text-align: center;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0px;
 }
 header{
@@ -45,19 +45,14 @@ a{
 #contact{
   top: 20%;
 }
-#title1, #app{
-  display: block;
-  text-align: center;
-}
-#title2, #contact{
-  display: none;
-  text-align: center;
-}
+
 #title1, #title2, #month{
   font-size: 6vw;
 }
 .flecha{
   font-size: 4vw;
+  padding: 0px;
+  margin: 0px;
 }
 @media only screen and (orientation: Portrait){
   .showInPortrait{
@@ -78,5 +73,8 @@ a{
   .right {
    float: left;
    width: 50%;
+  }
+  h2{
+    font-size: 2.5vw;
   }
 }

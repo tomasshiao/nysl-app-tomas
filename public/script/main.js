@@ -38,22 +38,43 @@ app.meses.forEach(mes => {
     });
     }
 });
+$("#title1").show();
+$("#app").show();
+$("#aContact").show();
+$("#block1").show();
+$("#title2").hide();
+$("#contact").hide();
+$("#aSchedule").hide();
 
-
-function cambioPagina(){
-  var schedule = document.getElementById("title1");
-  var contact = document.getElementById("title2");
-  var scheduleSection = document.getElementById("app");
-  var contactSection = document.getElementById("contact");
-  if(contact.style.display == "none"){
-    schedule.style.display =  "none";
-    scheduleSection.style.display =  "none";
-    contact.style.display =  "block";
-    contactSection.style.display =  "block";
-  } else {
-    contact.style.display =  "none";
-    contactSection.style.display =  "none";
-    schedule.style.display =  "block";
-    scheduleSection.style.display =  "block";
+function cambioPagina(pagina){
+  // var scheduleSection = document.getElementById("app");
+  // var contactSection = document.getElementById("contact");
+  // if(contact.style.display == "none"){
+  //   schedule.style.display =  "none";
+  //   scheduleSection.style.display =  "none";
+  //   contact.style.display =  "block";
+  //   contactSection.style.display =  "block";
+  // } else {
+  //   contact.style.display =  "none";
+  //   contactSection.style.display =  "none";
+  //   schedule.style.display =  "block";
+  //   scheduleSection.style.display =  "block";
+  // }
+  if(pagina == "schedule"){
+    $("#title1").hide();
+    $("#app").hide();
+    $("#aContact").hide();
+    $("#block1").hide();
+    $("#title2").show();
+    $("#contact").show();
+    $("#aSchedule").show();
+  } else if(pagina == "contact"){
+    $("#title1").show();
+    $("#app").show();
+    $("#aContact").show();
+    $("#block1").show();
+    $("#title2").hide();
+    $("#contact").hide();
+    $("#aSchedule").hide();
   }
 }
