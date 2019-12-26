@@ -51,9 +51,11 @@
           <button v-on:click="mesPosterior(today)" class="btn btn-outline-light col col-1 flecha text-center">→</button>
         </div>
         <div  class="left">
-          <div class="accordion" id="accordion" class="partidosTabla" v-for="(fecha, index) in mes.fechas" v-if="today == mes.numero">
+          <div id="accordion">
+          <div class="partidosTabla" v-for="(fecha, index) in mes.fechas" v-if="today == mes.numero">
+          <div class="accordion">
             <div class="card">
-              <button class="btn btn-link" type="button" data-toggle="collapse" v-bind:data-target="'#collapse' + fecha.numero" aria-expanded="true" v-bind:aria-controls="'collapse' + fecha.numero">
+              <button class="btn btn-link" data-toggle="collapse" v-bind:data-target="'#collapse' + fecha.numero" aria-expanded="true" v-bind:aria-controls="'collapse' + fecha.numero">
                 <div class="card-header" v-bind:id="'heading' + fecha.numero">
                   <h2 class="mb-0 text-center" id="matchday">
                     {{ 'Matchday ' + fecha.numero + ' (' + fecha.mes + '/' + fecha.dia + ')' }}
@@ -73,9 +75,10 @@
             </div>
           </div>
         </div>
+          </div>
+        </div>
         <div class="right">
           <div id="mapa"  class="showInLandscape" style="width:100%; height: 100%;" v-if="today == mes.numero && mes.fechas.length > 0">
-            <h2>MAP</h2>
           <iframe id="selectedMap" src="https://www.google.com/maps/d/embed?mid=1SID7QdfDWObUWMXQOsC6PyJM3FKPEW9K" width="100%" height="100%"></iframe>
           </div>
         </div>
