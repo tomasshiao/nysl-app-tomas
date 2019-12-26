@@ -3,7 +3,7 @@ body{
     color: antiquewhite;
 }
 h2{
-  font-size: 4vw;
+  font-size: 3vw;
 }
 #encabezado{
     float: right;
@@ -38,7 +38,9 @@ header{
     background-color: black;
     color: white;
 }
-
+#matchday{
+  font-size: 3.5vw;
+}
 a{
     color: #A4FF4A;
 }
@@ -75,6 +77,6 @@ a{
    width: 50%;
   }
   h2{
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
 }

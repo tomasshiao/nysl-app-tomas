@@ -55,7 +55,7 @@
             <div class="card">
               <button class="btn btn-link" type="button" data-toggle="collapse" v-bind:data-target="'#collapse' + fecha.numero" aria-expanded="true" v-bind:aria-controls="'collapse' + fecha.numero">
                 <div class="card-header" v-bind:id="'heading' + fecha.numero">
-                  <h2 class="mb-0 text-center">
+                  <h2 class="mb-0 text-center" id="matchday">
                     {{ 'Matchday ' + fecha.numero + ' (' + fecha.mes + '/' + fecha.dia + ')' }}
                   </h2>
                 </div>
@@ -67,7 +67,7 @@
                   <h2 class="col">{{ partido.equipo1 + ' vs ' + partido.equipo2 }}</h2>
                   <h2 class="col"> {{ partido.horario }} </h2>
                   <h2 class="col showInPortrait" id="btn-maps"><a v-bind:href=partido.map>{{ partido.estadio }}</a></h2>
-                  <h2 class="col showInLandscape btn-estadio-class"><a v-bind:id="'btn-estadio' + index" v-on:click="seleccionarEstadio(partido.map, index)">{{ partido.estadio }}</a></h2>
+                  <h2 class="col showInLandscape btn-estadio-class"><a v-bind:id="'btn-estadio' + index" v-on:click="seleccionarEstadio(partido.map, index)" style="color: #A4FF4A; font-size: 1.5vw;">{{ partido.estadio }}</a></h2>
                 </div>
               </div>
             </div>
